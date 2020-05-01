@@ -16,17 +16,17 @@ NOTE: Linux users will find they can run this application on their host machine.
 **Step 1:** Start your Mininet Ubuntu VM and log in
 *Login: mininet*
 *Password: mininet*
-    * Step 1a: Run `ifconfig` to get your URL for SSHing into the VM from your host machine.
-    * Step 1b: Run `sudo dhclient` to enable the NAT forwarding port on your VM to connect to the internet.
+**Step 1a:** Run `ifconfig` to get your URL for SSHing into the VM from your host machine.
+**Step 1b:** Run `sudo dhclient` to enable the NAT forwarding port on your VM to connect to the internet.
 
 **Step 2:** Establish 2 separate connections to the VM 
 ```bash
 # Connection 1: Mininet Console
-ssh -X mininet@<your VM url>
+ssh -X mininet@<your VM IP>
 ```
 ```bash
 # Connection 2: Controller Console
-ssh mininet@<your VM url>
+ssh mininet@<your VM IP>
 sudo dhclient # enables DHCP through the NAT connection you have provided your VM
 ```
 
